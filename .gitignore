@@ -1,0 +1,7 @@
+##input, output, data폴더 무시
+train/
+pred_train/
+pred_input/
+input/
+output/
+__pycache__/
