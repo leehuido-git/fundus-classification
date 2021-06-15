@@ -1,8 +1,8 @@
 '''
-train.py
-Author: Daewung Kim (skywalker.deja@gmail.com)
-normal medium abnormal
-EfficientNetB7
+classifier_train.py
+Author: HUIDO LEE (j3jjj2021@naver.com)
+normal medium(intermediate) abnormal
+EfficientNetB0, EfficientNetB7
 '''
 from unicodedata import name
 from numpy.core.defchararray import lower

@@ -1,3 +1,9 @@
+'''
+classifier.py
+Author: HUIDO LEE (j3jjj2021@naver.com)
+normal medium(intermediate) abnormal
+EfficientNetB0, EfficientNetB7
+'''
 import cv2
 import numpy as np
 from classifier_train import outside_masking, load_imgs_dir, resize, model, load_data, pred_1st_img
@@ -50,7 +56,8 @@ if __name__ == '__main__':
       pred = model.predict(input)
       img_result.append(0 if np.argmax(pred[0])==0 else 1 if np.argmax(pred[0])==1 else 2)
     max_value = max(img_result.count(0), img_result.count(1), img_result.count(2))
-    result += '{}, {}, {:.2f}\n'.format(names[i], "normal" if img_result.count(0)==max_value else "abnormal" if img_result.count(1)==max_value else "medium", max_value/36)
+#    result += '{}, {}, {:.2f}\n'.format(names[i], "normal" if img_result.count(0)==max_value else "abnormal" if img_result.count(1)==max_value else "medium", max_value/36)
+    result += '{}, {}, {:.2f}\n'.format(names[i], "normal" if img_result.count(0)==max_value else "abnormal" if img_result.count(1)==max_value else "intermediate", max_value/36)
 
   with open(join(local_path,'output', 'result.csv'), 'w') as f:
     f.write(result)
