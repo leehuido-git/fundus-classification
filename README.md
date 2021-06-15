@@ -2,7 +2,6 @@
 안저 이미지 사진에서 정상, 중간, 비정상분류
 
 ## 개요
-![Processing](./img/process.png)
 본 시스템은 크게 2가지 단계로 이루어져 있습니다.
 1. Pre-processing  
 스마트 폰 카메라로 촬영한 사진으로부터 렌즈영역을 찾아낸뒤 전처리
@@ -19,7 +18,7 @@
 
 1. anaconda prompt에서 원하는 폴더로 이동하는 방법
 (예를 들어 C:\Users\j3jjj에서 C:\Users\j3jjj\Desktop\pj\딥러닝 세미나로 이동하는 법)
-![move_directory](../img/move_directory.gif)
+![move_directory](./img/move_directory.gif)
 
 ---
 cd .. : 이전으로 이동  
@@ -53,19 +52,19 @@ pip install -r requirements.txt
 
 ### 구조
 1. 전처리
-![pre_processing_1](../img/pre_processing_1.png)
-![pre_processing_2](../img/pre_processing_2.png)
+![pre_processing_1](./img/pre_processing_1.png)
+![pre_processing_2](./img/pre_processing_2.png)
 (이미지를 회전하여 1장의 이미지를 36장으로 만들어줍니다)   
 -train: train폴더에 있는 이미지를 위와 같은 방법으로 처리합니다   
 -test: input폴더에 있는 이미지를 위와 같은 방법으로 처리합니다   
 
 2. classification model
-![model](../img/model.png)
+![model](./img/model.png)
 Base Network로는 최근에 주목받는 EfficientNet중에서 경량화된 EfficientNet B0를 사용합니다    
 extra layer로는 dense와 dropout을 추가했습니다  
 
 ### 성능
-![loss](../img/loss.png)
+![loss](./img/loss.png)
 Traning 이미지와 Validation 이미지, test 이미지를 0.63, 0.27, 0.1로 나누어 학습과 검증을 100 epoch 진행하였으며, 학습 중 Validation loss가 3번 연속으로 떨어지지않을 때 정지한 결과입니다.  
 또한 test 이미지를 통해 데이터에 대한 범용성을 가지는지 확인했습니다  
 
@@ -77,7 +76,7 @@ $ python classifier.py
 입력 이미지는 input/폴더에 있어야 합니다   
 
 ### 결과
-![result]](../img/result.png)
+![result]](./img/result.png)
 | 라벨 | 설명 |
 | -------- | ----------- |
 | image name | 이미지 이름 |
