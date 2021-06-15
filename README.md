@@ -30,7 +30,8 @@ dir : 현재 디렉토리의 폴더, 파일 리스트
 ```
 pip install -r requirements.txt
 ```
-
+  
+  
 ## 디렉토리 구조
 ```
 .
@@ -48,35 +49,38 @@ pip install -r requirements.txt
 | `input/` | test하고 싶은 이미지 저장 |
 | `output/` | test이미지에 대한 결과를 csv로 저장 |
 | `checkpoint/` | 학습이 끝난 뒤 loss가 가장 낮은 가중치를 저장 |
-
-
+  
+  
 ## 구조
-1. 전처리
-![pre_processing_1](./img/pre_processing_1.png)
-![pre_processing_2](./img/pre_processing_2.png)
+1. 전처리  
+![pre_processing_1](./img/pre_processing_1.png)  
+![pre_processing_2](./img/pre_processing_2.png)  
 (이미지를 회전하여 1장의 이미지를 36장으로 만들어줍니다)   
 -train: train폴더에 있는 이미지를 위와 같은 방법으로 처리합니다   
 -test: input폴더에 있는 이미지를 위와 같은 방법으로 처리합니다   
 
-2. classification model
-![model](./img/model.png)
+2. classification model  
+![model](./img/model.png)  
 Base Network로는 최근에 주목받는 EfficientNet중에서 경량화된 EfficientNet B0를 사용합니다    
 extra layer로는 dense와 dropout을 추가했습니다  
+  
 
 ## 성능
 ![loss](./img/loss.png)
 Traning 이미지와 Validation 이미지, test 이미지를 0.63, 0.27, 0.1로 나누어 학습과 검증을 100 epoch 진행하였으며, 학습 중 Validation loss가 3번 연속으로 떨어지지않을 때 정지한 결과입니다.  
 또한 test 이미지를 통해 데이터에 대한 범용성을 가지는지 확인했습니다  
-
+  
+  
 ## 실행
 다음과 같이 프로그램을 실행 합니다  
 ```
 $ python classifier.py
 ```
 입력 이미지는 input/폴더에 있어야 합니다   
+  
 
 ## 결과
-![result]](./img/result.png)
+![result](./img/result.png)  
 | 라벨 | 설명 |
 | -------- | ----------- |
 | image name | 이미지 이름 |
