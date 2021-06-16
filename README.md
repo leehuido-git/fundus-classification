@@ -71,8 +71,13 @@ extra layer로는 dense와 dropout을 추가했습니다
 | normal | 271 | 6588 |
 | Intermediate | 510 | 15876 |
 | abnormal | 360 | 9684 |
+| total | 1141 | 32148 |  
   
-Traning 이미지와 Validation 이미지, test 이미지를 20253(0.63%), 8679(0.27%), 3214(0.1%)로 나누어 학습과 검증을 100 epoch 진행하였으며, 학습 중 Validation loss가 3번 연속으로 떨어지지않을 때 정지한 결과입니다.  
+| Traning | Validation | test |
+| -------- | ----------- | ----------- |
+| 20253 | 8679 | 3214 |
+  
+Traning 이미지와 Validation 이미지, test 이미지를 0.63, 0.27, 0.1로 나누어 학습과 검증을 100 epoch 진행하였으며, 학습 중 Validation loss가 3번 연속으로 떨어지지않을 때 정지한 결과입니다.  
 ![loss](./img/loss.png)  
 또한 test 이미지를 통해 데이터에 대한 범용성을 가지는지 확인했습니다  
   
